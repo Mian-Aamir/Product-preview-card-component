@@ -1,0 +1,109 @@
+:root{
+    --main-body-color:hsl(26, 40%, 92%);
+    --box-color:hsl(0, 0%, 100%);
+    --AddToCart-color:hsl(158, 36%, 37%);
+    --AddToCart-hover-color:hsl(158, 42%, 18%);
+    --Font-color:hsl(212, 21%, 14%);
+}
+
+body{
+    background-color: var(--main-body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box{
+    background-color: var(--box-color);
+    width: min(100%, 22rem);
+    height: auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.Grid1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.Grid2{
+    padding:clamp(0.2rem,6vw,1.5rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.4rem, 3.2vw, 1rem);;
+    
+}
+
+.Grid2 h1{
+    font-family: 'Fraunces', serif;
+}
+
+.Grid2 p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price-row h1{
+  color: var(--AddToCart-color);
+}
+
+.Cart img{
+    gap:2rem;
+}
+
+button {
+  background-color: var(--AddToCart-color);
+  width: 100%;
+  color: var(--main-body-color);
+  padding:clamp(0.2rem,6vw,1.5rem);
+  font-size: clamp(0.4rem, 3.8vw, 1rem);
+  
+  display: flex;            
+  align-items: center;
+  justify-content: center;  
+  gap: 0.7rem;              
+  
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+button:hover{
+    background-color: var(--AddToCart-hover-color);
+}
+
+p{
+    font-size: clamp(0.4rem, 3.8vw, 1rem);
+    margin: 0;
+}
+
+h1{
+    font-size: clamp(0.4rem, 7.7vw, 2rem);
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+del{
+    font-size: clamp(0.4rem, 3.8vw, 1rem);
+}
+
+@media(min-width:45rem){
+    .box{
+        width: 100%;
+        max-width: 36rem;
+        height: 29rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+   }
+}
